@@ -1,24 +1,27 @@
-Authentication Microservice 🛡️
-Welcome to the Authentication Microservice repository! 🚀 This service is part of a distributed system designed to handle user authentication operations, including login, registration, and password validation. 🔐
+Authentication Service 🔐
+Welcome to the Authentication Service repository! This project contains a set of microservices designed for handling various authentication tasks. It includes microservices for user login, registration, CAPTCHA simulation, and generating secure passwords. These services work together to provide a comprehensive solution for user authentication and security.
 
-Key Features ⭐
-Login Endpoint 🔑: Secure authentication for users with their credentials.
+Description 🛠️
+The Authentication Service is a collection of microservices that perform different functions related to user authentication. It is built to ensure secure and efficient authentication for users in any system that requires login functionality. The service relies on SQL Server for managing user data and authentication processes.
 
-Register Endpoint 📝: Allow new users to register seamlessly.
+Core Microservices ⚙️
+Login Microservice: Handles user login functionality. It verifies user credentials and issues authentication tokens if the user exists and the credentials are valid.
 
-Captcha Integration 🤖: Protect your registration process from bots with CAPTCHA validation.
+Register Microservice: Manages user registration, allowing new users to create accounts by providing their information, such as email and password.
 
-Password Management 🛠️: A dedicated microservice for password validation and management, ensuring user data safety.
+Captcha Microservice: Simulates a CAPTCHA process, ensuring that requests are coming from a human and preventing automated bot interactions.
 
-CORS Support 🌍: Integrated CORS to ensure smooth communication between domains and APIs.
+Password Microservice: Generates secure, random passwords for users and ensures that passwords meet security standards (e.g., length, complexity).
 
+Technologies Used 🧑‍💻
+SQL Server: The database used for storing user data and authentication-related information.
+Microservices Architecture: Each service in the system operates independently, making it scalable and easy to maintain.
+Flask: The framework used to build the microservices, providing a lightweight and flexible foundation for web services.
+JWT (JSON Web Tokens): Likely used for secure token-based authentication (implied by the login functionality).
 Project Structure 📂
-.github/workflows: Contains GitHub Actions workflows for Continuous Integration/Continuous Deployment (CI/CD).
-
-login: Logic and endpoints for user authentication. 
-
-register: Logic and endpoints for new user registration. 
-
-captcha-microservice: Microservice responsible for CAPTCHA validation during registration.
-
-password-microservice: Microservice focused on password validation and security.
+Login: This microservice handles user login, validating credentials and issuing authentication tokens.
+Register: This microservice is responsible for user registration, where new users provide their details and create an account.
+Captcha Microservice: This microservice simulates a CAPTCHA challenge, preventing automated systems from accessing sensitive resources.
+Password Microservice: This service ensures that users' passwords are secure and generates strong passwords as needed.
+SQL Server Database: All user and authentication data are securely stored in the SQL Server database.
+Feel free to explore and contribute to the repository. This service is designed to be easily extendable and integrated into larger systems.
